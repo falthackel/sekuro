@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float integral(float A)
+float i(float A)
 {
     return(0,5*A*(A+1));
 }
@@ -12,12 +12,12 @@ int main() {
 
     double B;
     printf("Angka 2: ");
-    scanf("&lf", &B);
+    scanf("%lf", &B);
 
     char operator;
     scanf("Operator: %c", &operator);
 
-    int i;
+    int j;
 
     double result = 0;
 
@@ -36,18 +36,20 @@ int main() {
         printf("%.1lf", A/B);
         break;
     case '^':
-        for (i = 1; i <= B; ++i)
+        for (j = 1; j <= B; ++j)
         {
             result += (1*A);
         }
         printf("%.1lf", result);
-    case 'integral':
-        for (i = 1; i <= B; ++i)
+        break;
+    case 'i':
+        for (j = 1; j <= B; ++j)
         {
-            result += integral(A);
+            result += i(A);
             A += 1;
         }
         printf("%.1lf", result);
+        break;
     default:
         printf("Error");
         break;
